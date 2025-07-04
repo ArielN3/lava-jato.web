@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoSpa - Lava-jato e estética automotiva premium com agendamento online">
+    <meta name="keywords" content="lava-jato, estética automotiva, detailing, enceramento, lavagem">
+    <title>AutoSpa - Lava-jato e Estética Automotiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="car"></i>
+                    <span>AutoSpa</span>
+                </div>
+                <nav class="nav">
+                    <button onclick="scrollToSection('home')" class="nav-link">Início</button>
+                    <button onclick="scrollToSection('services')" class="nav-link">Serviços</button>
+                    <button onclick="scrollToSection('booking')" class="nav-link">Agendamento</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contato</button>
+                </nav>
+                <button onclick="scrollToSection('booking')" class="btn-primary">Agendar</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button onclick="scrollToSection('home')" class="mobile-nav-link">Início</button>
+        <button onclick="scrollToSection('services')" class="mobile-nav-link">Serviços</button>
+        <button onclick="scrollToSection('booking')" class="mobile-nav-link">Agendamento</button>
+        <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contato</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Seu Carro
+                    <span class="gradient-text">Impecável</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Serviços premium de lavagem e estética automotiva com agendamento online
+                </p>
+                <div class="hero-buttons">
+                    <button onclick="scrollToSection('booking')" class="btn-gradient">
+                        Agendar Agora
+                    </button>
+                    <button onclick="scrollToSection('services')" class="btn-outline">
+                        Ver Serviços
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">
+                    Oferecemos uma gama completa de serviços para deixar seu veículo impecável
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="lavagem-simples">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="droplets"></i>
+                        </div>
+                        <div class="service-price">
+                            <div class="price">R$ 25</div>
+                            <div class="duration">30 min</div>
+                        </div>
+                    </div>
+                    <h3 class="service-name">Lavagem Simples</h3>
+                    <p class="service-description">Lavagem externa completa com produtos de qualidade</p>
+                    <button onclick="selectService('lavagem-simples')" class="btn-service">
+                        Escolher Serviço
+                    </button>
+                </div>
+
+                <div class="service-card" data-service="lavagem-completa">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <div class="service-price">
+                            <div class="price">R$ 45</div>
+                            <div class="duration">60 min</div>
+                        </div>
+                    </div>
+                    <h3 class="service-name">Lavagem Completa</h3>
+                    <p class="service-description">Lavagem interna e externa + aspiração completa</p>
+                    <button onclick="selectService('lavagem-completa')" class="btn-service">
+                        Escolher Serviço
+                    </button>
+                </div>
+ 
+
+                <div class="service-card" data-service="enceramento">
+                    
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <div class="service-price">
+                            <div class="price">R$ 80</div>
+                            <div class="duration">90 min</div>
+                        </div>
+                    </div>
+                    <h3 class="service-name">Enceramento</h3>
+                    <p class="service-description">Enceramento profissional com cera de carnaúba</p>
+                    <button onclick="selectService('enceramento')" class="btn-service">
+                        Escolher Serviço
+                    </button>
+                </div>
+
+                <div class="service-card" data-service="detailing">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="service-price">
+                            <div class="price">R$ 150</div>
+                            <div class="duration">180 min</div>
+                        </div>
+                    </div>
+                    <h3 class="service-name">Detailing Premium</h3>
+                    <p class="service-description">Serviço completo de detailing automotivo</p>
+                    <button onclick="selectService('detailing')" class="btn-service">
+                        Escolher Serviço
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Agende seu Horário</h2>
+                <p class="section-subtitle">
+                    Preencha o formulário e confirme via WhatsApp
+                </p>
+            </div>
+
+            <div class="booking-form-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="carModel">Modelo do Carro *</label>
+                            <input type="text" id="carModel" name="carModel" required placeholder="Ex: Honda Civic 2020">
+                        </div>
+                        <div class="form-group">
+                            <label for="carColor">Cor do Carro *</label>
+                            <input type="text" id="carColor" name="carColor" required placeholder="Ex: Branco">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Serviço *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="lavagem-simples">Lavagem Simples - R$ 25,00</option>
+                            <option value="lavagem-completa">Lavagem Completa - R$ 45,00</option>
+                            <option value="enceramento">Enceramento - R$ 80,00</option>
+                            <option value="detailing">Detailing Premium - R$ 150,00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Data *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Horário *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Selecione o horário</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observations">Observações</label>
+                        <textarea id="observations" name="observations" rows="4" placeholder="Alguma observação especial sobre seu veículo..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp">
+                        <i data-lucide="phone"></i>
+                        <span>Confirmar via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contato</h2>
+                <p class="section-subtitle">
+                    Estamos prontos para atender você
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-9999</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Endereço</h3>
+                    <p>
+                        Rua das Palmeiras, 123<br>
+                        Vila Madalena, São Paulo - SP
+                    </p>
+                     <div class="contact-card contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3388.897695653067!2d-47.942118924863045!3d-16.11223908457343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935985e275a2d6c1%3A0xe247efe3892693e3!2sBAL%C3%83O%20DA%20SANTA!5e1!3m2!1spt-BR!2sbr!4v1751655822598!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+               
+        
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Horário</h3>
+                    <p>
+                        Segunda à Sexta: 8h às 18h<br>
+                        Sábado: 8h às 16h
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i data-lucide="car"></i>
+                    <span>AutoSpa</span>
+                </div>
+                <p class="footer-text">
+                    Transformando seu carro em uma obra de arte
+                </p>
+                <div class="footer-rating">
+                    <div class="stars">
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                        <i data-lucide="star"></i>
+                    </div>
+                    <span>5.0 estrelas</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
