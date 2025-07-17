@@ -15,8 +15,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <i data-lucide="car"></i>
-                    <span>AutoSpa</span>
+                    <img src="logo.png" alt="Logo-GP-Lava-Car">
+
                 </div>
                 <nav class="nav">
                     <button onclick="scrollToSection('home')" class="nav-link">Início</button>
@@ -73,8 +73,8 @@
                 </p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card" data-service="lavagem-simples">
+            <div class="services-grid" >
+                <div class="service-card" data-service="lavagem-simples" id="simples">
                     <div class="service-header">
                         <div class="service-icon">
                             <i data-lucide="droplets"></i>
@@ -91,7 +91,7 @@
                     </button>
                 </div>
 
-                <div class="service-card" data-service="lavagem-completa">
+                <div class="service-card" data-service="lavagem-completa" id="detalhada">
                     <div class="service-header">
                         <div class="service-icon">
                             <i data-lucide="sparkles"></i>
@@ -101,7 +101,7 @@
                             <div class="duration">60 min</div>
                         </div>
                     </div>
-                    <h3 class="service-name">Lavagem Completa</h3>
+                    <h3 class="service-name">Lavagem Detalhada</h3>
                     <p class="service-description">Lavagem interna e externa + aspiração completa</p>
                     <button onclick="selectService('lavagem-completa')" class="btn-service">
                         Escolher Serviço
@@ -109,40 +109,24 @@
                 </div>
  
 
-                <div class="service-card" data-service="enceramento">
+                <div class="service-card" data-service="enceramento" id="higienizacao">
                     
                     <div class="service-header">
                         <div class="service-icon">
                             <i data-lucide="shield"></i>
                         </div>
                         <div class="service-price">
-                            <div class="price">R$ 80</div>
+                            <div class="price">R$ 100</div>
                             <div class="duration">90 min</div>
                         </div>
                     </div>
-                    <h3 class="service-name">Enceramento</h3>
+                    <h3 class="service-name">HIGIENIZAÇÃO</h3>
                     <p class="service-description">Enceramento profissional com cera de carnaúba</p>
                     <button onclick="selectService('enceramento')" class="btn-service">
                         Escolher Serviço
                     </button>
                 </div>
 
-                <div class="service-card" data-service="detailing">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i data-lucide="zap"></i>
-                        </div>
-                        <div class="service-price">
-                            <div class="price">R$ 150</div>
-                            <div class="duration">180 min</div>
-                        </div>
-                    </div>
-                    <h3 class="service-name">Detailing Premium</h3>
-                    <p class="service-description">Serviço completo de detailing automotivo</p>
-                    <button onclick="selectService('detailing')" class="btn-service">
-                        Escolher Serviço
-                    </button>
-                </div>
             </div>
         </div>
     </section>
@@ -191,9 +175,8 @@
                         <select id="service" name="service" required>
                             <option value="">Selecione um serviço</option>
                             <option value="lavagem-simples">Lavagem Simples - R$ 25,00</option>
-                            <option value="lavagem-completa">Lavagem Completa - R$ 45,00</option>
-                            <option value="enceramento">Enceramento - R$ 80,00</option>
-                            <option value="detailing">Detailing Premium - R$ 150,00</option>
+                            <option value="lavagem-completa">Lavagem Detalhada - R$ 45,00</option>
+                            <option value="higienizacao">Higienização - R$ 100,00</option>
                         </select>
                     </div>
 
@@ -250,7 +233,7 @@
                         <i data-lucide="phone"></i>
                     </div>
                     <h3>Telefone</h3>
-                    <p>(11) 99999-9999</p>
+                    <p>(61) 99428-7017</p>
                 </div>
 
                 <div class="contact-card">
@@ -282,30 +265,95 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i data-lucide="car"></i>
-                    <span>AutoSpa</span>
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="GP Lava Car">
+            </div>
+
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+
+                    <p class="footer-text">
+                        <a href="https://wa.me/556194287017?text=Olá,%20gostaria%20de%20informações%20sobre%20os%20serviços" target="_blank">
+                            <i data-lucide="phone"></i> WhatsApp: (61) 99428-7017
+                        </a>
+                    </p>
+
+                    <p class="footer-text">
+                        <i data-lucide="mail"></i> Email: gplavacar@gmai.com
+                    </p>
+
+                    <p class="footer-text">
+                        <a href="https://maps.app.goo.gl/hKE8xfyAaUhM6zPw7">
+                        <i data-lucide="map-pin"></i> Endereço: Rua Exemplo, 123
+                        </a>
+                    </p>
+
                 </div>
-                <p class="footer-text">
-                    Transformando seu carro em uma obra de arte
-                </p>
-                <div class="footer-rating">
-                    <div class="stars">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <span>5.0 estrelas</span>
+
+                <div class="footer-section">
+                    <h3>Horário de Atendimento</h3>
+                    <p class="footer-text">
+                        <i data-lucide="clock"></i> Seg-Sex: 08:00 - 18:00
+                    </p>
+                    <p class="footer-text">
+                        <i data-lucide="clock"></i> Sábado: 09:00 - 14:00
+                    </p>
+                    <p class="footer-text">
+                        <i data-lucide="clock"></i> Domingo: Fechado
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Nossos Serviços</h3>
+                    
+                    <p class="footer-text">
+                        <a href="#simples">
+                        <i data-lucide="sparkles"></i> Lavagem Simples
+                        </a>
+                    </p>
+                             
+                    <p class="footer-text">
+                        <a href="#detalhada">
+                        <i data-lucide="sparkles"></i> Lavagem Detalhada
+                        </a>
+                    </p>
+   
+                    <p class="footer-text">
+                        <a href="#higienizacao">
+                        <i data-lucide="sparkles"></i> Higienização 
+                        </a>
+                    </p>
+
                 </div>
             </div>
+
+            <div class="footer-rating">
+                <div class="stars">
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                    <i data-lucide="star"></i>
+                </div>
+                <span>5.0 estrelas</span>
+            </div>
+
+            <p class="footer-copyright">
+                &copy; 2025 GP LAVA CAR. Todos os direitos reservados.
+                <br>
+                <p class="code">
+                    <a href="https://code-tinity.netlify.app/">
+                <img src="image-removebg-preview (32).png" alt="">
+                </a>
+                </p>
+            </p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="script.js"></script>
